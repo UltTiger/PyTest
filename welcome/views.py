@@ -18,5 +18,8 @@ def index(request):
         'count': PageView.objects.count()
     })
 
+def another(request):
+    return render(request, "welcome/another.html")
+
 def health(request):
     return HttpResponse(PageView.objects.count())
